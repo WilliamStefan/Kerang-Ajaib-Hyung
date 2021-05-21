@@ -1,11 +1,18 @@
+import os
 import random
 import telebot
+import logging
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# logger = telebot.logger
+telebot.logger.setLevel(logging.DEBUG)
 
 answers = ["Ya", "Nggak"] # Jawaban si bot Kerang Ajaib Hyung
 
 # Token si bot Kerang Ajaib Hyung
-API_KEY = '1818338059:AAEzMAp6IMeZcJZPN_mV5-Qg3jXcTFY46Uk'
-bot = telebot.TeleBot(API_KEY)
+bot = telebot.TeleBot(os.environ['API_KEY'])
 
 @bot.message_handler(func=lambda message: True, content_types=["text", "photo"])
 def handler(input_text):
