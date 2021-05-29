@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # logger = telebot.logger
-telebot.logger.setLevel(logging.DEBUG)
+telebot.logger.setLevel(logging.INFO)
 
 answers = ["Ya", "Nggak"] # Jawaban si bot Kerang Ajaib Hyung
 
