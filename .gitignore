@@ -1,1 +1,5 @@
 .env
+history.json
+__pycache__
+.vscode
+
